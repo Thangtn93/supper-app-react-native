@@ -1,0 +1,37 @@
+{
+  "name": "super-app-showcase",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start:host": "yarn workspace host run start",
+    "start:booking": "yarn workspace booking run start",
+    "start:shopping": "yarn workspace shopping run start",
+    "start:dashboard": "yarn workspace dashboard run start",
+    "start:auth": "yarn workspace auth run start",
+    "start:catalog": "yarn workspace catalog-server run start",
+    "start:standalone:shell": "yarn workspace shell run start",
+    "start:standalone:dashboard": "yarn workspace dashboard run start:standalone",
+    "run:host:ios": "yarn workspace host run ios",
+    "run:host:android": "yarn workspace host run android",
+    "run:shell:ios": "yarn workspace shell run ios",
+    "run:shell:android": "yarn workspace shell run android",
+    "run:dashboard:ios": "yarn workspace dashboard run ios",
+    "run:dashboard:android": "yarn workspace dashboard run android",
+    "bundle:auth:ios": "yarn workspace auth run bundle:ios",
+    "bundle:auth:android": "yarn workspace auth run bundle:android",
+    "pods": "yarn workspaces foreach run pods",
+    "start": "concurrently -P 'yarn:start:*(!standalone) {1}'",
+    "typecheck": "yarn workspaces foreach run typecheck",
+    "lint": "yarn workspaces foreach run lint",
+    "test": "yarn workspaces foreach run test",
+    "adbreverse": "adb reverse tcp:3000 tcp:3000 &&  adb reverse tcp:9000 tcp:9000 &&  adb reverse tcp:9001 tcp:9001 &&  adb reverse tcp:9002 tcp:9002 &&  adb reverse tcp:9003 tcp:9003"
+  },
+  "packageManager": "yarn@3.2.1",
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
