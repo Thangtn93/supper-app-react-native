@@ -10,7 +10,7 @@ import {CompositeScreenProps} from '@react-navigation/native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {MainStackParamList} from '../navigation/MainNavigator';
 import {Card, Paragraph, Title} from 'react-native-paper';
-import services from '../data/services.json';
+import services from '../../../shared/data/services.json';
 import {ServicesStackParamList} from '../navigation/ServicesNavigator';
 
 type ServiceScreenProps = CompositeScreenProps<

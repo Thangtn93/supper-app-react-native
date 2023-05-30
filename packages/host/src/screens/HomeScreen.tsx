@@ -14,10 +14,10 @@ import {
 } from 'react-native-paper';
 import {TabsParamList} from '../navigation/TabsNavigator';
 import {HomeStackParamList} from '../navigation/HomeNavigator';
-import upcomingBookings from '../data/upcomingBookings.json';
-import newProducts from '../data/newProducts.json';
-import recentNews from '../data/recentNews.json';
-import recentArticles from '../data/recentArticles.json';
+import upcomingBookings from '../../../shared/data/upcomingBookings.json';
+import newProducts from '../../../shared/data/newProducts.json';
+import recentNews from '../../../shared/data/recentNews.json';
+import recentArticles from '../../../shared/data/recentArticles.json';
 
 type Props = CompositeScreenProps<
   NativeStackScreenProps<HomeStackParamList>,
