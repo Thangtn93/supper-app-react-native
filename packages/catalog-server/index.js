@@ -4,6 +4,7 @@ const host = require('./data/host.json')
 const booking = require('./data/booking.json')
 const shopping = require('./data/shopping.json')
 const dashboard = require('./data/dashboard.json')
+const notification = require('./data/notification.json')
 
 const app = express()
 const port = 3000
@@ -31,6 +32,12 @@ app.get('/dashboard', (req, res) => {
     const appVersion = req.query.appVersion
 
     res.send(dashboard[platform][appVersion])
+})
+app.get('/notification', (req, res) => {
+    const platform = req.query.platform
+    const appVersion = req.query.appVersion
+
+    res.send(notification[platform][appVersion])
 })
 
 app.listen(port, () => {

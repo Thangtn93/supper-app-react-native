@@ -5,6 +5,7 @@
             "shopping": "http://localhost:9001/[name][ext]",
             "news": "https://raw.githubusercontent.com/callstack/news-mini-app-showcase/main/build/generated/ios/[name][ext]",
             "dashboard": "http://localhost:9002/[name][ext]",
+            "notification": "http://localhost:9005/[name][ext]",
             "auth": "http://localhost:9003/[name][ext]"
         }
     },
@@ -14,6 +15,7 @@
             "shopping": "http://localhost:9001/[name][ext]",
             "news": "https://raw.githubusercontent.com/callstack/news-mini-app-showcase/main/build/generated/android/[name][ext]",
             "dashboard": "http://localhost:9002/[name][ext]",
+            "notification": "http://localhost:9005/[name][ext]",
             "auth": "http://localhost:9003/[name][ext]"
         }
     }
