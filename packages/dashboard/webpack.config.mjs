@@ -1,7 +1,7 @@
 import * as Repack from '@callstack/repack';
 import path from 'path';
 import TerserPlugin from 'terser-webpack-plugin';
-import {deps} from '../../shared/dependencies.mjs';
+import {deps} from '../../../shared/dependencies.mjs';
 
 /**
  * This env variable shows if bundle is standalone and eager should be enabled in Module federation Plugin config.

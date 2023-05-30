@@ -15,16 +15,16 @@ const SignInScreen = React.lazy(() =>
 const App = () => {
   return (
     <ErrorBoundary name="AuthProvider">
-      <React.Suspense fallback={<SplashScreen />}>
+      <React.Suspense fallback={<SplashScreen content={"Host application is loading. Please wait..."} />}>
         <AuthProvider>
           {(authData: {isSignout: boolean; isLoading: boolean}) => {
             if (authData.isLoading) {
-              return <SplashScreen />;
+              return <SplashScreen content={"Host application is loading. Please wait..."} />;
             }
 
             if (authData.isSignout) {
               return (
-                <React.Suspense fallback={<SplashScreen />}>
+                <React.Suspense fallback={<SplashScreen content={"Host application is loading. Please wait..."} />}>
                   <SignInScreen />
                 </React.Suspense>
               );
